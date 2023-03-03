@@ -14,7 +14,8 @@ pipeline {
             script{
                  def file = readFile "./data.txt"
                     def lines = file.readLines()[0].split(' ')
-                    println lines
+                    println lines[0]
+                    println lines[1]
                     env.name = lines[0]
                     env.ages = lines[1]
             }
